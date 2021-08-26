@@ -1,7 +1,8 @@
 const createMenuContent = () => {
   const menuArray = [];
   const menuContent = document.createElement('div');
-
+  menuContent.setAttribute('id', 'menu-content');
+  //h2 / title
   const createMenuInfo = (itemName, itemDescription, itemPrice) => {
     const menuDiv = document.createElement('div');
     menuDiv.classList.add('menu');
@@ -19,9 +20,16 @@ const createMenuContent = () => {
     menuArray.push(menuDiv);
   }
   
-  createMenuInfo('Nasi Gudeg', 'Makanan Khas Yogyakarta', 'Rp 30,000')
-  createMenuInfo('Nasi Semarang', 'Makanan Khas Semarang', 'Rp 30,000')
-  createMenuInfo('Iga Bakar', 'Iga sapi dibakar', 'Rp 40,000')
+  createMenuInfo('Nasi Gudeg Yogya', 'Made from unripe young jack fruit, served with rice, egg, chicken, and crisp beef skins.', 'Rp 25,000');
+  createMenuInfo('Nasi Liwet Solo', 'Makanan Khas Solo', 'Rp 25,000');
+  createMenuInfo('Iga Bakar', 'Iga sapi dibakar', 'Rp 35,000');
+  createMenuInfo('Sop Iga', 'soup', 'Rp 30,000');
+  createMenuInfo('Ayam Betutu Bali', 'enak', 'Rp 25,000');
+  createMenuInfo('Lemon Squash', 'drink', 'Rp 15,000');
+  createMenuInfo('Passion Fruit Squash', 'drink', 'Rp 15,000');
+  createMenuInfo('Yakult Mojito', 'drink', 'Rp 20,000');
+  createMenuInfo('Es Kopi Klepon', 'drink', 'Rp 30,000');
+  createMenuInfo('Kopi Susu Gula Aren', 'drink', 'Rp 18,000');
   
   menuArray.forEach((menu) => {
     menuContent.appendChild(menu);

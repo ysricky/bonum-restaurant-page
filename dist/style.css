@@ -9,9 +9,10 @@
 
 #content {
   min-height: 100vh;
+  min-width: 100vw;
   display: grid;
   grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
-  grid-template-rows: 0.2fr 1fr 0.2fr;
+  grid-template-rows: min-content auto min-content;
   grid-template-areas:
     'logo logo nav nav'
     '. content content .'
@@ -56,12 +57,30 @@ h1 {
   grid-area: footer;
 }
 
+#menu-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.menu {
+  height: 225px;
+  width: 200px;
+  font-size: 13px;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* responsive design */
 
 @media only screen and (max-width: 500px) {
   #content {
     grid-template-columns: 0.1fr 1fr 0.1fr;
-    grid-template-rows: 0.2fr 0.2fr 1fr 0.2fr;
+    grid-template-rows: repeat(2, min-content) auto min-content;
     grid-template-areas:
       'logo logo logo'
       'nav nav nav'
