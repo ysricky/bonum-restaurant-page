@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#content {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+  grid-template-areas:
+    'logo logo nav nav'
+    '. content content .'
+    'footer footer footer footer';
+}
+
+#logo {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Tenor Sans', sans-serif;
+}
+
+#navbar {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Tenor Sans', sans-serif;
+}
+
+#main-content {
+  grid-area: content;
+  font-family: 'Julius Sans One', serif;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: 'Tenor Sans', sans-serif;
+  grid-area: footer;
+}
+
+/* responsive design */
+
+@media only screen and (max-width: 500px) {
+  #content {
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.2fr 0.2fr 1fr 0.2fr;
+    grid-template-areas:
+      'logo logo logo'
+      'nav nav nav'
+      '. content .'
+      'footer footer footer';
+  }
+}
