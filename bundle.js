@@ -16,7 +16,7 @@
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createContactContent\": () => (/* binding */ createContactContent)\n/* harmony export */ });\nconst createContactContent = () => {\n  const contactContent = document.createElement('div');\n  contactContent.textContent = 'this is contact content';\n  return contactContent;\n};\n\n\n\n\n//# sourceURL=webpack://bonum-restaurant-page/./src/contact.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createContactContent\": () => (/* binding */ createContactContent)\n/* harmony export */ });\nconst createContactContent = () => {\n  const contactContent = document.createElement('div');\n  const title = document.createElement('h2');\n  const p1 = document.createElement('p');\n  const p2 = document.createElement('p')\n  const followBtn = document.createElement('button');\n\n  title.textContent = 'Our Location:';\n  p1.textContent = 'Bonum Cafe & Resto';\n  p2.textContent = 'Villa Grand Tomang Boulevard Ruko R.02 No.15, Periuk, Tangerang, Banten, Indonesia.';\n  followBtn.textContent = 'FOLLOW US ON INSTAGRAM';\n\n  contactContent.append(title, p1, p2, followBtn);\n\n\n  return contactContent;\n};\n\n\n\n\n//# sourceURL=webpack://bonum-restaurant-page/./src/contact.js?");
 
 /***/ }),
 
@@ -46,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createHomeContent\": () => (/* binding */ createHomeContent)\n/* harmony export */ });\nconst createHomeContent = () => {\n  const homeContent = document.createElement('div');\n  homeContent.textContent = 'this is home content';\n  return homeContent;\n};\n\n\n\n\n//# sourceURL=webpack://bonum-restaurant-page/./src/home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createHomeContent\": () => (/* binding */ createHomeContent)\n/* harmony export */ });\nconst createHomeContent = () => {\n  const homeContent = document.createElement('div');\n  const title = document.createElement('h2');\n  const p1 = document.createElement('p');\n  const p2 = document.createElement('p');\n  const p3 = document.createElement('p');\n  const p4 = document.createElement('p');\n\n  title.textContent = 'Welcome foodlovers!';\n  p1.textContent = 'Good food and good vibes';\n  p2.textContent = 'Perfect place to satisfy your hunger';\n  p3.textContent = 'Taste the difference';\n  p4.textContent = 'You can enjoy our foods from Sunday to Saturday, 11.00pm to 21.00pm';\n\n  homeContent.append(title, p1, p2, p3, p4);\n\n  return homeContent;\n};\n\n\n\n\n//# sourceURL=webpack://bonum-restaurant-page/./src/home.js?");
 
 /***/ }),
 
@@ -66,7 +66,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hea
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createMenuContent\": () => (/* binding */ createMenuContent)\n/* harmony export */ });\nconst createMenuContent = () => {\n  const menuContent = document.createElement('div');\n  menuContent.textContent = 'this is menu content';\n  return menuContent;\n};\n\n\n\n\n//# sourceURL=webpack://bonum-restaurant-page/./src/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createMenuContent\": () => (/* binding */ createMenuContent)\n/* harmony export */ });\nconst createMenuContent = () => {\n  const menuArray = [];\n  const menuContent = document.createElement('div');\n\n  const createMenuInfo = (itemName, itemDescription, itemPrice) => {\n    const menuDiv = document.createElement('div');\n    menuDiv.classList.add('menu');\n\n    const name = document.createElement('h3');\n    const description = document.createElement('p');\n    const price = document.createElement('p');\n\n    name.textContent = itemName;\n    description.textContent = itemDescription;\n    price.textContent = itemPrice;\n\n    menuDiv.append(name, description, price);\n\n    menuArray.push(menuDiv);\n  }\n  \n  createMenuInfo('Nasi Gudeg', 'Makanan Khas Yogyakarta', 'Rp 30,000')\n  createMenuInfo('Nasi Semarang', 'Makanan Khas Semarang', 'Rp 30,000')\n  createMenuInfo('Iga Bakar', 'Iga sapi dibakar', 'Rp 40,000')\n  \n  menuArray.forEach((menu) => {\n    menuContent.appendChild(menu);\n  })\n  \n  return menuContent;\n};\n\n\n\n\n//# sourceURL=webpack://bonum-restaurant-page/./src/menu.js?");
 
 /***/ }),
 
