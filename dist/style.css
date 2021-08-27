@@ -24,6 +24,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 h1 {
@@ -35,6 +37,8 @@ h1 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .nav {
@@ -55,6 +59,8 @@ h1 {
   text-transform: uppercase;
   font-family: 'Tenor Sans', sans-serif;
   grid-area: footer;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #menu-content {
@@ -68,11 +74,23 @@ h1 {
   height: 225px;
   width: 200px;
   font-size: 13px;
-  background-color: aquamarine;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin: 10px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.menu > h3,
+.menu > p:last-child {
+  background: linear-gradient(to right, black, rgb(199, 199, 199));
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
 }
 
 /* responsive design */
@@ -86,5 +104,9 @@ h1 {
       'nav nav nav'
       '. content .'
       'footer footer footer';
+  }
+
+  #navbar {
+    margin-top: 0;
   }
 }
