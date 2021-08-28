@@ -24,13 +24,13 @@ const navHandler = () => {
 
     switch (nav.target.getAttribute('id')) {
       case 'home':
-        mainContent.appendChild(createHomeContent());
+        mainContent.append(createHomeContent());
         break;
       case 'menu':
-        mainContent.appendChild(createMenuContent());
+        mainContent.append(createMenuContent());
         break;
       case 'contact':
-        mainContent.appendChild(createContactContent());
+        mainContent.append(createContactContent());
         break;
     }
   };

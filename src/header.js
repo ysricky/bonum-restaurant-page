@@ -3,7 +3,7 @@ const createHeader = () => {
   const logo = document.createElement('h1');
   logo.textContent = 'BONUM.';
   header.setAttribute('id', 'logo');
-  header.appendChild(logo);
+  header.append(logo);
 
   return header;
 };
